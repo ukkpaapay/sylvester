@@ -1,0 +1,186 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.food.isekai"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->C:\Users\Nitro5\Desktop\sylvester\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->C:\Users\Nitro5\Desktop\sylvester\app\src\main\AndroidManifest.xml
+10
+11    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+12    <!-- <uses-sdk android:minSdkVersion="14" /> -->
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->[com.google.firebase:firebase-firestore:21.3.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\a10e3541ea5e0b35140671f7f876defa\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:13:5-79
+13-->[com.google.firebase:firebase-firestore:21.3.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\a10e3541ea5e0b35140671f7f876defa\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:13:22-76
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->[com.google.firebase:firebase-firestore:21.3.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\a10e3541ea5e0b35140671f7f876defa\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:14:5-67
+14-->[com.google.firebase:firebase-firestore:21.3.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\a10e3541ea5e0b35140671f7f876defa\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:14:22-64
+15    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+15-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\af1704dc699c2480b887d35fcff81153\jetified-firebase-iid-17.0.4\AndroidManifest.xml:24:5-68
+15-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\af1704dc699c2480b887d35fcff81153\jetified-firebase-iid-17.0.4\AndroidManifest.xml:24:22-65
+16    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+16-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\af1704dc699c2480b887d35fcff81153\jetified-firebase-iid-17.0.4\AndroidManifest.xml:26:5-82
+16-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\af1704dc699c2480b887d35fcff81153\jetified-firebase-iid-17.0.4\AndroidManifest.xml:26:22-79
+17
+18    <application
+18-->C:\Users\Nitro5\Desktop\sylvester\app\src\main\AndroidManifest.xml:5:5-20:19
+19        android:allowBackup="true"
+19-->C:\Users\Nitro5\Desktop\sylvester\app\src\main\AndroidManifest.xml:6:9-35
+20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+20-->[androidx.core:core:1.1.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\3bcafbc2e95e113b9db4402c8bff255d\core-1.1.0\AndroidManifest.xml:24:18-86
+21        android:debuggable="true"
+22        android:icon="@mipmap/ic_launcher"
+22-->C:\Users\Nitro5\Desktop\sylvester\app\src\main\AndroidManifest.xml:7:9-43
+23        android:label="@string/app_name"
+23-->C:\Users\Nitro5\Desktop\sylvester\app\src\main\AndroidManifest.xml:8:9-41
+24        android:roundIcon="@mipmap/ic_launcher_round"
+24-->C:\Users\Nitro5\Desktop\sylvester\app\src\main\AndroidManifest.xml:9:9-54
+25        android:supportsRtl="true"
+25-->C:\Users\Nitro5\Desktop\sylvester\app\src\main\AndroidManifest.xml:10:9-35
+26        android:theme="@style/AppTheme" >
+26-->C:\Users\Nitro5\Desktop\sylvester\app\src\main\AndroidManifest.xml:11:9-40
+27        <activity android:name="com.food.isekai.ListActivity" />
+27-->C:\Users\Nitro5\Desktop\sylvester\app\src\main\AndroidManifest.xml:12:9-59
+27-->C:\Users\Nitro5\Desktop\sylvester\app\src\main\AndroidManifest.xml:12:19-47
+28        <activity android:name="com.food.isekai.MainActivity" >
+28-->C:\Users\Nitro5\Desktop\sylvester\app\src\main\AndroidManifest.xml:13:9-19:20
+28-->C:\Users\Nitro5\Desktop\sylvester\app\src\main\AndroidManifest.xml:13:19-47
+29            <intent-filter>
+29-->C:\Users\Nitro5\Desktop\sylvester\app\src\main\AndroidManifest.xml:14:13-18:29
+30                <action android:name="android.intent.action.MAIN" />
+30-->C:\Users\Nitro5\Desktop\sylvester\app\src\main\AndroidManifest.xml:15:17-69
+30-->C:\Users\Nitro5\Desktop\sylvester\app\src\main\AndroidManifest.xml:15:25-66
+31
+32                <category android:name="android.intent.category.LAUNCHER" />
+32-->C:\Users\Nitro5\Desktop\sylvester\app\src\main\AndroidManifest.xml:17:17-77
+32-->C:\Users\Nitro5\Desktop\sylvester\app\src\main\AndroidManifest.xml:17:27-74
+33            </intent-filter>
+34        </activity>
+35        <!--
+36             FirebaseMessagingService performs security checks at runtime,
+37             no need for explicit permissions despite exported="true"
+38        -->
+39        <service
+39-->[com.google.firebase:firebase-messaging:17.3.4] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\2046e9f8a55ba6d1bcffa79124d07a6c\jetified-firebase-messaging-17.3.4\AndroidManifest.xml:28:9-34:19
+40            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+40-->[com.google.firebase:firebase-messaging:17.3.4] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\2046e9f8a55ba6d1bcffa79124d07a6c\jetified-firebase-messaging-17.3.4\AndroidManifest.xml:29:13-82
+41            android:exported="true" >
+41-->[com.google.firebase:firebase-messaging:17.3.4] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\2046e9f8a55ba6d1bcffa79124d07a6c\jetified-firebase-messaging-17.3.4\AndroidManifest.xml:30:13-36
+42            <intent-filter android:priority="-500" >
+42-->[com.google.firebase:firebase-messaging:17.3.4] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\2046e9f8a55ba6d1bcffa79124d07a6c\jetified-firebase-messaging-17.3.4\AndroidManifest.xml:31:13-33:29
+42-->[com.google.firebase:firebase-messaging:17.3.4] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\2046e9f8a55ba6d1bcffa79124d07a6c\jetified-firebase-messaging-17.3.4\AndroidManifest.xml:31:28-51
+43                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+43-->[com.google.firebase:firebase-messaging:17.3.4] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\2046e9f8a55ba6d1bcffa79124d07a6c\jetified-firebase-messaging-17.3.4\AndroidManifest.xml:32:17-78
+43-->[com.google.firebase:firebase-messaging:17.3.4] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\2046e9f8a55ba6d1bcffa79124d07a6c\jetified-firebase-messaging-17.3.4\AndroidManifest.xml:32:25-75
+44            </intent-filter>
+45        </service>
+46
+47        <activity
+47-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\b5644461ae56d3bcb008bd7a18c828b2\firebase-auth-19.2.0\AndroidManifest.xml:24:9-31:50
+48            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
+48-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\b5644461ae56d3bcb008bd7a18c828b2\firebase-auth-19.2.0\AndroidManifest.xml:25:13-85
+49            android:excludeFromRecents="true"
+49-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\b5644461ae56d3bcb008bd7a18c828b2\firebase-auth-19.2.0\AndroidManifest.xml:26:13-46
+50            android:exported="true"
+50-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\b5644461ae56d3bcb008bd7a18c828b2\firebase-auth-19.2.0\AndroidManifest.xml:27:13-36
+51            android:launchMode="singleTask"
+51-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\b5644461ae56d3bcb008bd7a18c828b2\firebase-auth-19.2.0\AndroidManifest.xml:28:13-44
+52            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+52-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\b5644461ae56d3bcb008bd7a18c828b2\firebase-auth-19.2.0\AndroidManifest.xml:29:13-102
+53            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+53-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\b5644461ae56d3bcb008bd7a18c828b2\firebase-auth-19.2.0\AndroidManifest.xml:30:13-72
+54
+55        <service
+55-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\b5644461ae56d3bcb008bd7a18c828b2\firebase-auth-19.2.0\AndroidManifest.xml:33:9-39:19
+56            android:name="com.google.firebase.components.ComponentDiscoveryService"
+56-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\b5644461ae56d3bcb008bd7a18c828b2\firebase-auth-19.2.0\AndroidManifest.xml:34:13-84
+57            android:directBootAware="true"
+57-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\1c65746f79a58b6d60d40050df5565a2\jetified-firebase-common-19.3.0\AndroidManifest.xml:34:13-43
+58            android:exported="false" >
+58-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\b5644461ae56d3bcb008bd7a18c828b2\firebase-auth-19.2.0\AndroidManifest.xml:35:13-37
+59            <meta-data
+59-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\b5644461ae56d3bcb008bd7a18c828b2\firebase-auth-19.2.0\AndroidManifest.xml:36:13-38:85
+60                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+60-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\b5644461ae56d3bcb008bd7a18c828b2\firebase-auth-19.2.0\AndroidManifest.xml:37:17-109
+61                android:value="com.google.firebase.components.ComponentRegistrar" />
+61-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\b5644461ae56d3bcb008bd7a18c828b2\firebase-auth-19.2.0\AndroidManifest.xml:38:17-82
+62            <meta-data
+62-->[com.google.firebase:firebase-firestore:21.3.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\a10e3541ea5e0b35140671f7f876defa\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:20:13-22:85
+63                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+63-->[com.google.firebase:firebase-firestore:21.3.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\a10e3541ea5e0b35140671f7f876defa\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:21:17-111
+64                android:value="com.google.firebase.components.ComponentRegistrar" />
+64-->[com.google.firebase:firebase-firestore:21.3.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\a10e3541ea5e0b35140671f7f876defa\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:22:17-82
+65            <meta-data
+65-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\af1704dc699c2480b887d35fcff81153\jetified-firebase-iid-17.0.4\AndroidManifest.xml:32:13-34:85
+66                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+66-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\af1704dc699c2480b887d35fcff81153\jetified-firebase-iid-17.0.4\AndroidManifest.xml:33:17-96
+67                android:value="com.google.firebase.components.ComponentRegistrar" />
+67-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\af1704dc699c2480b887d35fcff81153\jetified-firebase-iid-17.0.4\AndroidManifest.xml:34:17-82
+68        </service>
+69
+70        <receiver
+70-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\af1704dc699c2480b887d35fcff81153\jetified-firebase-iid-17.0.4\AndroidManifest.xml:37:9-44:20
+71            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+71-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\af1704dc699c2480b887d35fcff81153\jetified-firebase-iid-17.0.4\AndroidManifest.xml:38:13-78
+72            android:exported="true"
+72-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\af1704dc699c2480b887d35fcff81153\jetified-firebase-iid-17.0.4\AndroidManifest.xml:39:13-36
+73            android:permission="com.google.android.c2dm.permission.SEND" >
+73-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\af1704dc699c2480b887d35fcff81153\jetified-firebase-iid-17.0.4\AndroidManifest.xml:40:13-73
+74            <intent-filter>
+74-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\af1704dc699c2480b887d35fcff81153\jetified-firebase-iid-17.0.4\AndroidManifest.xml:41:13-43:29
+75                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+75-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\af1704dc699c2480b887d35fcff81153\jetified-firebase-iid-17.0.4\AndroidManifest.xml:42:17-81
+75-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\af1704dc699c2480b887d35fcff81153\jetified-firebase-iid-17.0.4\AndroidManifest.xml:42:25-78
+76            </intent-filter>
+77        </receiver>
+78        <!--
+79             FirebaseInstanceIdService performs security checks at runtime,
+80             no need for explicit permissions despite exported="true"
+81        -->
+82        <service
+82-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\af1704dc699c2480b887d35fcff81153\jetified-firebase-iid-17.0.4\AndroidManifest.xml:50:9-56:19
+83            android:name="com.google.firebase.iid.FirebaseInstanceIdService"
+83-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\af1704dc699c2480b887d35fcff81153\jetified-firebase-iid-17.0.4\AndroidManifest.xml:51:13-77
+84            android:exported="true" >
+84-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\af1704dc699c2480b887d35fcff81153\jetified-firebase-iid-17.0.4\AndroidManifest.xml:52:13-36
+85            <intent-filter android:priority="-500" >
+85-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\af1704dc699c2480b887d35fcff81153\jetified-firebase-iid-17.0.4\AndroidManifest.xml:53:13-55:29
+85-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\af1704dc699c2480b887d35fcff81153\jetified-firebase-iid-17.0.4\AndroidManifest.xml:53:28-51
+86                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+86-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\af1704dc699c2480b887d35fcff81153\jetified-firebase-iid-17.0.4\AndroidManifest.xml:54:17-80
+86-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\af1704dc699c2480b887d35fcff81153\jetified-firebase-iid-17.0.4\AndroidManifest.xml:54:25-77
+87            </intent-filter>
+88        </service>
+89
+90        <provider
+90-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\1c65746f79a58b6d60d40050df5565a2\jetified-firebase-common-19.3.0\AndroidManifest.xml:26:9-30:39
+91            android:name="com.google.firebase.provider.FirebaseInitProvider"
+91-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\1c65746f79a58b6d60d40050df5565a2\jetified-firebase-common-19.3.0\AndroidManifest.xml:27:13-77
+92            android:authorities="com.food.isekai.firebaseinitprovider"
+92-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\1c65746f79a58b6d60d40050df5565a2\jetified-firebase-common-19.3.0\AndroidManifest.xml:28:13-72
+93            android:exported="false"
+93-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\1c65746f79a58b6d60d40050df5565a2\jetified-firebase-common-19.3.0\AndroidManifest.xml:29:13-37
+94            android:initOrder="100" />
+94-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\1c65746f79a58b6d60d40050df5565a2\jetified-firebase-common-19.3.0\AndroidManifest.xml:30:13-36
+95
+96        <activity
+96-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\cfafb781a345d3f54848aefef9b2f0c0\play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+97            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+97-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\cfafb781a345d3f54848aefef9b2f0c0\play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+98            android:exported="false"
+98-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\cfafb781a345d3f54848aefef9b2f0c0\play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+99            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+99-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\cfafb781a345d3f54848aefef9b2f0c0\play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+100
+101        <meta-data
+101-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\7784bd660b972f822ff384381eee5548\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+102            android:name="com.google.android.gms.version"
+102-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\7784bd660b972f822ff384381eee5548\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+103            android:value="@integer/google_play_services_version" />
+103-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Nitro5\.gradle\caches\transforms-2\files-2.1\7784bd660b972f822ff384381eee5548\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+104    </application>
+105
+106</manifest>
