@@ -33,4 +33,3 @@ dependencies {
     implementation 'com.google.firebase:firebase-firestore:21.3.0'
     implementation 'com.android.support:multidex:1.0.3'
 }
-

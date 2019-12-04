@@ -3,6 +3,7 @@ package com.food.isekai;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,6 +18,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -52,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void signInClick(View view){
         final String TAG = "signInClick";
-        String email = ((TextView)findViewById(R.id.editText)).getText().toString();
+        final String email = ((TextView)findViewById(R.id.editText)).getText().toString();
         String password = ((TextView)findViewById(R.id.editText2)).getText().toString();
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -63,6 +66,9 @@ public class MainActivity extends AppCompatActivity {
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             updateUI(user);
+                            Intent intent = new Intent(MainActivity.this, ListActivity.class);
+                            intent.putExtra(EXTRA_MESSAGE, email);
+                            startActivity(intent);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
